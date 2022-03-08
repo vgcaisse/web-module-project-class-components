@@ -2,10 +2,19 @@ import React from 'react'
 
 export default class Form extends React.Component {
   render() {
+    const { values } = this.props
     return (
-      <div>
-        Form
-      </div>
+      <form>
+        <input 
+          // value={values.textInput}
+          type='text'
+          id=''
+          placeholder='What is yer todo?'
+          // checked={}
+        />
+          
+        <input type='submit'/>
+      </form>
     )
   }
 }
