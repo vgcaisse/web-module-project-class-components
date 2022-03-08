@@ -12,7 +12,7 @@ export default class TodoList extends React.Component {
             todos.map((to) => {
               const { id, todo, completed } = to
               return (
-                <li key={id}>
+                <li key={id} className='todoList'>
                   {todo}{completed === true ? '✔️' : ''}
                 </li>
               )

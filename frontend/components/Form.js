@@ -3,6 +3,13 @@ import React from 'react'
 export default class Form extends React.Component {
   onSubmit = e => {
     e.preventDefault()
+    this.props.onSubmit()
+  }
+
+  onChange = evt => {    
+    const { value, id } = evt.target
+    this.props.onChange(id, value)
+    console.log(value)
   }
 
   render() {
@@ -10,11 +17,11 @@ export default class Form extends React.Component {
     return (
       <form onSubmit={this.onSubmit}>
         <input 
+          onChange={this.onChange}
           value={textInput}
           type='text'
           id='input'
           placeholder='What is yer todo?'
-          completed={null}
         />
           
         <input type='submit'/>
