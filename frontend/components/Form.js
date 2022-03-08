@@ -1,16 +1,20 @@
 import React from 'react'
 
 export default class Form extends React.Component {
+  onSubmit = e => {
+    e.preventDefault()
+  }
+
   render() {
-    const { values } = this.props
+    const { textInput } = this.props
     return (
-      <form>
+      <form onSubmit={this.onSubmit}>
         <input 
-          // value={values.textInput}
+          value={textInput}
           type='text'
-          id=''
+          id='input'
           placeholder='What is yer todo?'
-          // checked={}
+          completed={null}
         />
           
         <input type='submit'/>

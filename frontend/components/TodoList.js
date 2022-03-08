@@ -4,19 +4,20 @@ export default class TodoList extends React.Component {
   
   render() {
     //.....................
+    const { todos } = this.props
     return (
       <div>
         <ul>
-          {/* {
-            this.todos.map((to) => {
-              const { id, todo, completed } = todo
+          {
+            todos.map((to) => {
+              const { id, todo, completed } = to
               return (
                 <li key={id}>
-                  {todo}{id}{completed}
+                  {todo}{completed}
                 </li>
               )
             })
-          } */}
+          }
         </ul>
       </div>
     )
