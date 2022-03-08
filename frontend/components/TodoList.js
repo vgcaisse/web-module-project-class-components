@@ -13,7 +13,7 @@ export default class TodoList extends React.Component {
               const { id, todo, completed } = to
               return (
                 <li key={id}>
-                  {todo}{completed}
+                  {todo}{completed === true ? '✔️' : ''}
                 </li>
               )
             })
